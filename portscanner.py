@@ -1,6 +1,7 @@
 import socket
 
 def scan(targets, ports):
+    print('\n' + ' Starting Scanning ' + str(targets))
     for port in range(1, ports + 1):
         scan_port(targets, port)
 
