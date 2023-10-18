@@ -13,11 +13,9 @@ def scan_port(ipaddress, port):
 
         if result == 0:
             print(f"[+] Port {port} is Open")
-        else:
-            print(f"[-] Port {port} is Closed")
         sock.close()
     except socket.error:
-        print(f"[-] Port {port} is Closed")
+        pass
 
 targets = input("[*] Enter Targets To Scan (split them by (,)): ")
 ports = int(input("[*] Enter How Many Ports To Scan: "))
